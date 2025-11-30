@@ -57,7 +57,15 @@ barplot(education_counts, main = "Number of People by Education Level", xlab = "
 # Boxplot: Shows salary distribution across education levels.
 boxplot(Salary ~ `Education Level`, data = dataset,  main = "Salary Distribution by Education Level", xlab = "Education Level", ylab = "Salary")
 
-
-
-
 # FUN is actually short for function and FUN = mean means to apply the mean() function on the specified data and use it for the calculation. 
+
+
+# Linear Regression Between YOE and Salary
+plot(Salary ~ `Years of Experience`, data = dataset,  main = "Salary vs Years of Experience", xlab = "Years of Experience", ylab = "Salary")
+model_salary = lm(Salary ~ `Years of Experience`, data = dataset)
+model_salary
+abline(model_salary, col = "red")
+summary(model_salary)
+
+# Scatter Plot
+ggplot(dataset, aes(x = `Years of Experience`, y = Salary)) + geom_point() + labs(title = "Salary vs Years of Experience", x = "Years of Experience", y = "Salary")
