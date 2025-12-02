@@ -47,6 +47,7 @@ hist(dataset$Age, main = "Age Distribution", xlab = "Age", ylab = "Frequency") #
 # Salary vs Education Bar Chart, Frequency of Job Fields by Education Level Bar Chart, Boxplot
 # Why? 
 # Salary vs Education Bar Chart: Effective for comparing degrees
+avg_education_salary = aggregate(Salary ~ `Education Level`, data = dataset, FUN = mean)
 barplot(avg_education_salary$Salary, names.arg = avg_education_salary$`Education Level`,  main = "Average Salary by Education Level", xlab = "Education Level", ylab = "Average Salary", ylim = c(0, max(avg_education_salary$Salary) * 1.2))
 
 # Frequency of Job Fields by Education Level Bar Chart: Shows which fields people with different degrees work in.
