@@ -1,5 +1,7 @@
 install.packages("RKaggle")  #Library where our dataset is located
+install.packages("ggplot2")  #Library where our dataset is located
 library(RKaggle)
+library(ggplot2)
 dataset = get_dataset("mohithsairamreddy/salary-data")  #retrieving/downloading our specific dataset we wanted to work with
 
 # Due to different spellings of PhD in the db, reformat all fields (probably not necessary for all but better safe than sorry. Update: it was very necessary)
