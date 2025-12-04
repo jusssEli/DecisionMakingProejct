@@ -71,4 +71,5 @@ abline(model_salary, col = "red")
 summary(model_salary)
 
 # Scatter Plot
+# aes = aesthetics, geom_point() makes it a scatter plot 
 ggplot(dataset, aes(x = `Years of Experience`, y = Salary)) + geom_point() + labs(title = "Salary vs Years of Experience", x = "Years of Experience", y = "Salary")
