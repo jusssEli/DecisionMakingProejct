@@ -73,3 +73,29 @@ summary(model_salary)
 # Scatter Plot
 # aes = aesthetics, geom_point() makes it a scatter plot 
 ggplot(dataset, aes(x = `Years of Experience`, y = Salary)) + geom_point() + labs(title = "Salary vs Years of Experience", x = "Years of Experience", y = "Salary")
+#Scatter Plot of age by salary
+ggplot(dataset, aes(x = Age, y = Salary)) + labs(title = "Salary vs Age", x = "Age", y = "Salary") + geom_point()
+
+#Summaries based on different factors
+#Education
+high_school <- dataset[dataset$`Education Level`== "High School", ]
+bachelors <- dataset[dataset$`Education Level`== "Bachelor's", ]
+summary(bachelors)
+masters <- dataset[dataset$`Education Level`== "Master's", ]
+summary(masters)
+phds <- dataset[dataset$`Education Level`== "PhD", ]
+summary(phds)#Education
+
+males <- dataset[dataset$Gender== "Male", ]
+summary(males)
+females <- dataset[dataset$Gender== "Female", ]
+summary(females)
+others <- dataset[dataset$Gender== "Other", ]
+summary(others)
+
+#Checking if different parts are normal
+qqnorm(dataset$Age)
+qqline(dataset$Age)
+
+qqnorm(dataset$`Years of Experience`)
+qqline(dataset$`Years of Experience`)
