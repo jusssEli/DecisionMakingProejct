@@ -79,6 +79,7 @@ ggplot(dataset, aes(x = Age, y = Salary)) + labs(title = "Salary vs Age", x = "A
 #Summaries based on different factors
 #Education
 high_school <- dataset[dataset$`Education Level`== "High School", ]
+summary(high_school)
 bachelors <- dataset[dataset$`Education Level`== "Bachelor's", ]
 summary(bachelors)
 masters <- dataset[dataset$`Education Level`== "Master's", ]
