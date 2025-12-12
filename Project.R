@@ -100,3 +100,7 @@ qqline(dataset$Age)
 
 qqnorm(dataset$`Years of Experience`)
 qqline(dataset$`Years of Experience`)
+
+#hypothesis testing if male salary and female salary are not equal
+t.test(males$Salary, females$Salary, alternative = c("two.sided", "less", "greater"), mu = 0, paired = FALSE, var.equal = FALSE, conf.level = 0.95)
+#WE DO REJECT THE NULL, THEY ARE NOT EQUAL
